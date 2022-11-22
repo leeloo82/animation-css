@@ -1,0 +1,247 @@
+html{
+    font-size: 14px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; a placer sur le parent donner une largeur */
+}
+
+h1::first-letter{
+    text-transform: uppercase;
+}
+
+.l-main-header{
+    /* position: absolute; */
+    width: auto; 
+}
+.l-main-header-img{
+    background:  url("../img/sheep.png") no-repeat bottom center, url("../img/clouds.png") repeat right center  ,rgb(0, 188, 210) ;
+    position: relative;
+    height: 30rem;
+    
+    background-size: 30rem auto, auto 30rem;
+    
+    animation: cloud 30s  linear infinite reverse ;
+
+}
+
+.l-main-header h1{
+    position: relative;
+    bottom: 10rem;
+    /* left: 15%; */
+    text-align: center;
+    font-size: 3rem;
+    text-shadow: 2px 2px rgb(255, 255, 255);
+
+}
+.l-main-header audio{
+   position: relative;
+   
+   bottom: 12rem;
+   border: none;
+   opacity: 25%;
+   display: block;
+   margin: 0 auto;
+   text-align: center;
+   
+}
+
+.l-main{
+    margin: -11rem 1rem 0;
+  
+}
+
+/*navigation*/
+.l-main-nav{
+    /* display: none; */
+    position: absolute;
+    right: -150rem;
+    width: 100%;
+    height: 30rem;
+    transition: 1s;
+
+}
+.l-main-nav.is-active{
+    
+    /* display: block; */
+    right: 0;
+    z-index: 10;
+    background: rgb(0, 188, 210) ;
+    
+}
+.l-main-nav ul{
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    text-align: center;
+
+}
+.l-main-nav ul:first-child{
+    padding: 6rem 0 0;
+
+}
+.l-main-nav li{
+    list-style: none;
+    margin: 0.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+    
+.l-main-nav a{
+    display: block;
+    padding:  0.5rem;
+    text-decoration: none;
+    color: #000;
+    
+   
+}
+.l-main-nav a:hover{
+    color: white;
+    background: #000;
+}
+.l-main-nav ul ul{
+    margin-left: 1rem;
+}
+
+.menu-ham{
+    margin: 0.3rem;
+   
+}
+.menu-ham img{
+    margin: 0.3rem;
+    position: absolute;
+    width: 3rem;
+    top: 5%;
+
+    z-index: 100;
+}
+/*gestion box flex*/
+.main-items-warp{
+    /* border: 1px solid green; */
+    
+
+}
+.main-content{
+    /* border: 1px solid red; */
+}
+/*formulaire index*/
+.main-form-contact{
+    border: 1px solid grey;
+}
+.main-form-contact h1{
+    /* border: 1px solid grey; */
+    color: #000;
+    text-align: center;
+}
+.main-form-contact form label{
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0.5rem;
+}
+
+.main-form-contact form input{
+    display: block;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+}
+.main-form-contact form textarea{
+    display: block;
+    width: 20rem;
+    margin: 0 auto;
+    /* padding: 0.5rem 1rem; */
+}
+.main-form-contact form .submit{
+    margin: 1rem auto;
+    border-radius: 2rem;
+    background: rgb(0, 188, 210) ;
+    box-shadow: 0.2rem 0.1rem grey;
+
+    text-transform: uppercase;
+    font-weight: bold;
+   
+}
+@media screen and (min-width: 720px){
+    .main-items-warp{
+        /* border: 1px solid green; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: space-between; 
+        
+    }
+    .main-form-contact{
+        /* border: 1px solid grey; */
+        margin: 1rem 0;
+    }
+    .main-form-contact-items-warp{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        /* align-content: space-around;  */
+    }
+    .main-form-items-info{
+
+        /* border: 1px solid red; */
+        margin: 1rem;
+    }
+    .main-form-items-message{
+        /* border: 1px solid purple; */
+        padding: 1rem;
+    }
+    .main-form-contact form .submit{
+        margin: 2rem auto;
+        border-radius: 2rem;
+        background: rgb(0, 188, 210) ;
+        box-shadow: 0.2rem 0.1rem grey;
+    
+        text-transform: uppercase;
+        font-weight: bold;
+       
+    }
+
+}
+
+@media screen and (min-width: 1024px){
+
+    .l-main-header h1{
+        position: relative; 
+        bottom: 13rem; 
+        /* left: 15%; */
+        left: 1rem;
+        text-align: left;
+        font-size: 3rem;
+        text-shadow: 2px 2px rgb(255, 255, 255);
+    }
+    .main-items-warp{
+        /* border: 1px solid green; */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: space-between; 
+        
+    }
+    .main-content, .main-form-contact{
+        width: 50%;
+    }
+    
+}
+
+/* gestion animation par keyframes  */
+@keyframes cloud{
+    0%{
+        background-position: bottom center, 100% center;
+
+    }
+    
+   
+    100%{
+        background-position: bottom center, 0% center;
+        
+
+    }
+}
